@@ -3,5 +3,5 @@
     <description>Picklewagon coding standard.</description>
 
     <!-- Include the whole WordPress Core standard -->
-    <rule ref="WordPress Core"/>
+    <rule ref="WordPress-Core" />
 </ruleset>

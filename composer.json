@@ -1,0 +1,37 @@
+{
+    "name": "picklewagon/picklewagon-coding-standards",
+    "type" : "phpcodesniffer-standard",
+    "description": "Enforce PHP coding standards in a PHP project.",
+    "keywords": [
+        "printerlogic",
+        "php-coding-standards",
+        "phpcs",
+        "standards"
+    ],
+    "homepage": "https://bitbucket.org/picklewagon/picklewagon-coding-standards/",
+    "license": "proprietary",
+    "require": {
+        "php" : "~5.6|~7.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "3.*",
+        "wimg/php-compatibility": "*"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "Picklewagon\\" : "Picklewagon/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths ../../..",
+        "post-update-cmd" : "\"vendor/bin/phpcs\" --config-set installed_paths ../../.."
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

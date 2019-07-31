@@ -25,6 +25,17 @@
         <exclude-pattern>database/seeds/*</exclude-pattern>
     </rule>
 
+    <!-- This fails the build if anybody tries to add the env function anywhere but in config and tests -->
+    <rule ref="Generic.PHP.ForbiddenFunctions">
+        <exclude-pattern>config</exclude-pattern>
+        <exclude-pattern>tests</exclude-pattern>
+        <properties>
+            <property name="forbiddenFunctions" type="array">
+                <element key="env" value="config" />
+            </property>
+        </properties>
+    </rule>
+
     <!-- Check for lines with just whitespace -->
     <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace">
         <properties>

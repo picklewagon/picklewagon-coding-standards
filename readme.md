@@ -73,8 +73,8 @@ Here is an example of what will be in this file:
     <arg name="extensions" value="php" />
     <arg name="report-json" value="build/reports/php/phpcs-code.json" />
 
-    <!-- Include the PrinterLogic coding standard. -->
-    <rule ref="PrinterLogic" />
+    <!-- Include the Picklewagon coding standard. -->
+    <rule ref="Picklewagon" />
 </ruleset>
 ```
 

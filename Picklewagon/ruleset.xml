@@ -12,13 +12,6 @@
 
     <rule ref="Zend.Files.ClosingTag" />
 
-    <rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie">
-        <properties>
-            <property name="checkFunctions" value="true" />
-            <property name="checkClosures" value="true" />
-        </properties>
-    </rule>
-
     <!-- Include all sniffs in the PSR2 standard. -->
     <rule ref="PSR2" />
 
@@ -80,12 +73,77 @@
     </rule>
 
     <!-- Find missing function/method level Doc Blocks -->
-    <rule ref="PEAR.Commenting.FunctionComment" />
-    <!--Remove rule enforcing that @param have vertical attribute alignment in function/method Doc Blocks -->
-    <rule ref="PEAR.Commenting.FunctionComment.SpacingAfterParamName">
-        <severity>0</severity>
+    <rule ref="PEAR.Commenting.FunctionComment">
+        <exclude name="PEAR.Commenting.FunctionComment.MissingReturn"/>
     </rule>
-    <rule ref="PEAR.Commenting.FunctionComment.SpacingAfterParamType">
-        <severity>0</severity>
+
+    <!-- Array formatting -->
+    <rule ref="Squiz.Arrays.ArrayDeclaration">
+        <exclude name="Squiz.Arrays.ArrayDeclaration.CloseBraceNotAligned" />
+        <exclude name="Squiz.Arrays.ArrayDeclaration.KeyNotAligned" />
+        <exclude name="Squiz.Arrays.ArrayDeclaration.MultiLineNotAllowed" />
+        <exclude name="Squiz.Arrays.ArrayDeclaration.ValueNotAligned" />
+        <exclude name="Squiz.Arrays.ArrayDeclaration.SingleLineNotAllowed" />
+        <exclude name="Squiz.Arrays.ArrayDeclaration.DoubleArrowNotAligned" />
     </rule>
+    <rule ref="Generic.Arrays.ArrayIndent" />
+    <rule ref="SlevomatCodingStandard.Arrays.DisallowImplicitArrayCreation" />
+    <rule ref="SlevomatCodingStandard.Arrays.TrailingArrayComma" />
+
+    <!-- Type hinting -->
+    <rule ref="SlevomatCodingStandard.TypeHints.TypeHintDeclaration">
+        <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingTraversablePropertyTypeHintSpecification" />
+        <properties>
+            <property name="allAnnotationsAreUseful" value="true" />
+        </properties>
+    </rule>
+    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing">
+        <properties>
+            <property name="spacesCountBeforeColon" value="1" />
+        </properties>
+    </rule>
+    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHintSpacing" />
+
+    <!-- Dead code -->
+    <rule ref="SlevomatCodingStandard.Classes.UnusedPrivateElements" />
+    <rule ref="SlevomatCodingStandard.Functions.UnusedInheritedVariablePassedToClosure" />
+    <rule ref="SlevomatCodingStandard.Functions.UnusedParameter" />
+    <rule ref="SlevomatCodingStandard.Functions.UselessParameterDefaultValue" />
+    <rule ref="SlevomatCodingStandard.Namespaces.UnusedUses" />
+    <rule ref="SlevomatCodingStandard.Namespaces.UseFromSameNamespace" />
+    <rule ref="SlevomatCodingStandard.Namespaces.UselessAlias" />
+    <rule ref="SlevomatCodingStandard.PHP.UselessParentheses" />
+    <rule ref="SlevomatCodingStandard.PHP.UselessSemicolon" />
+    <rule ref="SlevomatCodingStandard.Variables.DuplicateAssignmentToVariable" />
+    <rule ref="SlevomatCodingStandard.Variables.UnusedVariable" />
+    <rule ref="SlevomatCodingStandard.Variables.UselessVariable" />
+    <rule ref="SlevomatCodingStandard.Exceptions.DeadCatch" />
+
+    <!-- Formatting -->
+    <rule ref="SlevomatCodingStandard.Classes.SuperfluousAbstractClassNaming" />
+    <rule ref="SlevomatCodingStandard.Classes.SuperfluousInterfaceNaming" />
+    <rule ref="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming" />
+    <rule ref="SlevomatCodingStandard.Classes.SuperfluousTraitNaming" />
+    <rule ref="SlevomatCodingStandard.Classes.TraitUseDeclaration" />
+    <rule ref="SlevomatCodingStandard.Classes.TraitUseSpacing">
+        <properties>
+            <property name="linesCountBeforeFirstUse" value="0" />
+            <property name="linesCountAfterLastUseWhenLastInClass" value="0" />
+        </properties>
+    </rule>
+    <rule ref="SlevomatCodingStandard.ControlStructures.LanguageConstructWithParentheses" />
+    <rule ref="SlevomatCodingStandard.ControlStructures.NewWithParentheses" />
+    <rule ref="SlevomatCodingStandard.ControlStructures.RequireTernaryOperator" />
+    <rule ref="SlevomatCodingStandard.ControlStructures.RequireYodaComparison" />
+    <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses" />
+    <rule ref="SlevomatCodingStandard.Namespaces.RequireOneNamespaceInFile" />
+    <rule ref="SlevomatCodingStandard.Namespaces.NamespaceDeclaration" />
+    <rule ref="SlevomatCodingStandard.Namespaces.NamespaceSpacing" />
+    <rule ref="SlevomatCodingStandard.Namespaces.UseSpacing" />
+    <rule ref="SlevomatCodingStandard.Classes.ClassConstantVisibility" />
+    <rule ref="SlevomatCodingStandard.TypeHints.NullableTypeForNullDefaultValue" />
+    <rule ref="SlevomatCodingStandard.Namespaces.DisallowGroupUse" />
+    <rule ref="SlevomatCodingStandard.Namespaces.UseDoesNotStartWithBackslash" />
+    <rule ref="SlevomatCodingStandard.ControlStructures.UselessIfConditionWithReturn" />
+    <rule ref="SlevomatCodingStandard.ControlStructures.UselessTernaryOperator" />
 </ruleset>

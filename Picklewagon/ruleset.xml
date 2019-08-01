@@ -78,7 +78,9 @@
 
     <!-- Find missing function/method level Doc Blocks -->
     <rule ref="PEAR.Commenting.FunctionComment">
-        <exclude name="PEAR.Commenting.FunctionComment.MissingReturn"/>
+        <exclude name="PEAR.Commenting.FunctionComment.MissingReturn" />
+        <exclude name="PEAR.Commenting.FunctionComment.MissingParamComment" />
+        <exclude name="PEAR.Commenting.FunctionComment.SpacingAfterParamType" />
     </rule>
 
     <!-- Array formatting -->

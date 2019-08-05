@@ -93,12 +93,14 @@
         <exclude name="Squiz.Arrays.ArrayDeclaration.DoubleArrowNotAligned" />
     </rule>
     <rule ref="Generic.Arrays.ArrayIndent" />
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
     <rule ref="SlevomatCodingStandard.Arrays.DisallowImplicitArrayCreation" />
     <rule ref="SlevomatCodingStandard.Arrays.TrailingArrayComma" />
 
     <!-- Type hinting -->
     <rule ref="SlevomatCodingStandard.TypeHints.TypeHintDeclaration">
         <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingTraversablePropertyTypeHintSpecification" />
+        <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingTraversableReturnTypeHintSpecification" />
         <properties>
             <property name="allAnnotationsAreUseful" value="true" />
         </properties>

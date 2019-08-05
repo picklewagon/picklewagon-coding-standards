@@ -93,6 +93,7 @@
         <exclude name="Squiz.Arrays.ArrayDeclaration.DoubleArrowNotAligned" />
     </rule>
     <rule ref="Generic.Arrays.ArrayIndent" />
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
     <rule ref="SlevomatCodingStandard.Arrays.DisallowImplicitArrayCreation" />
     <rule ref="SlevomatCodingStandard.Arrays.TrailingArrayComma" />
 

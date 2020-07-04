@@ -98,13 +98,6 @@
     <rule ref="SlevomatCodingStandard.Arrays.TrailingArrayComma" />
 
     <!-- Type hinting -->
-    <rule ref="SlevomatCodingStandard.TypeHints.TypeHintDeclaration">
-        <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingTraversablePropertyTypeHintSpecification" />
-        <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingTraversableReturnTypeHintSpecification" />
-        <properties>
-            <property name="allAnnotationsAreUseful" value="true" />
-        </properties>
-    </rule>
     <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing">
         <properties>
             <property name="spacesCountBeforeColon" value="1" />

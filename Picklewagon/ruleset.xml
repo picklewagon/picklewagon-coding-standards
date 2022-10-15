@@ -106,7 +106,6 @@
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHintSpacing" />
 
     <!-- Dead code -->
-    <rule ref="SlevomatCodingStandard.Classes.UnusedPrivateElements" />
     <rule ref="SlevomatCodingStandard.Functions.UnusedInheritedVariablePassedToClosure" />
     <rule ref="SlevomatCodingStandard.Functions.UnusedParameter" />
     <rule ref="SlevomatCodingStandard.Functions.UselessParameterDefaultValue" />
